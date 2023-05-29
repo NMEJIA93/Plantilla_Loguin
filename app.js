@@ -1,0 +1,53 @@
+console.clear();
+console.log('Hola desde el inicio del archivo app.js')
+
+const express = require('express');
+const dotenv = require('dotenv');
+const cookieParse = require('cookie-parser')
+
+
+dotenv.config();
+
+const app = express();
+
+//setear variables de entorno
+/* dotenv.config({path: './env/env'})
+dotenv.config({path: './env/env'}) */
+
+
+
+const port = process.env.PORT || 3500 ;
+
+// Setear el motor de plantillas
+app.set('view engine', 'ejs');
+
+
+// setear la carpeta publica 
+app.use(express.static('public'));
+
+//para procesar los datos enviados desde los formularios
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+
+
+
+// para poder trabajar con las cookies
+/* app.use(cookieParse); */
+
+
+// setear las rutas 
+app.use('/',require('./routes/routes'));
+
+
+
+/* app.get('/', (req, res) => {
+    res.render('index')
+}) */
+
+app.listen(port, () => {
+    console.log(`Server UP in http://localhost:${port}`);
+})
+
+
+
+
