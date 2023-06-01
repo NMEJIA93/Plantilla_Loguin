@@ -51,13 +51,13 @@
                                 <input id="pass" name="pass" type="password" class="form-control">
                             </div>
 
-                         
+
                     </div>
                     <div class="card-footer bg-transparent border-primary">
                         <a href="/" type="button" class="btn btn-secondary">Cancelar</a>
                         <button type="submit" class="btn btn-primary">Registrar</button>
                     </div>
-                </form>
+                    </form>
                 </div>
 
             </div>
@@ -95,6 +95,21 @@
     </main> 
  -->
 
+<!--     <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
+    <% if(typeof alert !="undefined" ){%>
+        <script>
+            Swal.fire({
+                title: '<%= alertTitle %>',
+                text: '<%= alertMessage %>',
+                icon: '<%= alertIcon %>',
+                /* showConfirmButton: <%= showConfirmButton %>, */
+                timer: <%= timer %>
+            }).then(() => {
+                window.location = '/<%= ruta %> '
+            })
+        </script>
+        <% } %> -->
 
 </body>
 

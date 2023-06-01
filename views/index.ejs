@@ -94,9 +94,8 @@
     <link href="css/dashboard.css" rel="stylesheet">
 </head>
 
- <body>
+<body>
 
-    
     <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
         <symbol id="check2" viewBox="0 0 16 16">
             <path
@@ -173,12 +172,12 @@
             aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-       <!--  <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search"
+        <!--  <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search"
             aria-label="Search"> -->
         <div class="navbar-nav">
             <div class="nav-item text-nowrap">
                 <!-- <a class="nav-link px-3" href="#">Sign out</a> -->
-                <a type="button" class="nav-link px-3 w-100  btn btn-primary" href="">Sign out</a>
+                <a type="button" class="nav-link px-3 w-100  btn btn-primary" href="/logout">Sign out</a>
             </div>
         </div>
     </header>
@@ -235,10 +234,20 @@
                 <div
                     class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
                     <h1 class="h2">Dashboard</h1>
-               
+                    <h2>Bienbenido:
+                        <%if(user){%>
+                            <span class="badge bg-dark">
+                                <%=user %>
+                            </span>
+
+                            <% } %>
+
+
+                    </h2>
+
                 </div>
 
-              
+
             </main>
         </div>
     </div>
@@ -253,7 +262,7 @@
         integrity="sha384-gdQErvCNWvHQZj6XZM0dNsAoY4v+j5P1XDpNkcM3HJG1Yx04ecqIHk7+4VBOCHOG"
         crossorigin="anonymous"></script>
     <script src="js/dashboard.js"></script>
-</body> 
+</body>
 
 
 </html>

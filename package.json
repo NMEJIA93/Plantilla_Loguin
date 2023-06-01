@@ -4,8 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "nodemon ./app"
-    
+    "startDev": "nodemon ./app"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +17,7 @@
     "express": "^4.18.2",
     "express-session": "^1.17.3",
     "jsonwebtoken": "^9.0.0",
-    "mssql": "^9.1.1"
+    "mssql": "^9.1.1",
+    "sweetalert2": "^11.7.8"
   }
 }
